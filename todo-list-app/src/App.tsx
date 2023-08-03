@@ -1,42 +1,63 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import Task_Adder from "./components/Task_Adder";
 import Tasks from "./components/Tasks";
 import Task from './models/Task_Model';
-
+import { TaskContext } from "./context/Task_Context";
 
 const App = () => {
 
-  const [ task, setTask ] = useState<string>("");
-  const [ tasks, setTasks ] = useState<Task[]>([]);
+  const [ task, setTask ] = useState<Task>({
+    id: "",
+    isCompleted: false,
+    task: ""
+  });
 
-  console.log(tasks)
+  const [ tasks, setTasks ] = useState<Task[]>([]);
+  const [ isDisabled, setIsDisabled ] = useState<boolean>(false);
+
+  const props = {
+    task,
+    tasks,
+    setTask,
+    setTasks,
+    isDisabled,
+    setIsDisabled
+  }
+
   const onAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
 
     e.preventDefault();
 
-    if(task){
-      const new_task = {
+    if(task.task){
+
+      const task_ = {
         id: Date.now().toString(),
         isCompleted: false,
-        task
+        task: task.task
       }
   
-      tasks.push(new_task);
+      tasks.push(task_);
   
       setTasks([...tasks]);
   
-      setTask("");
+      setTask( {
+        id: "",
+        isCompleted: false,
+        task: ""
+      });
     }
   }
   
   return (
     <div className="font-mono">
-        <h1 className="text-center text-4xl font-bold">
+        <h1 className="text-center text-4xl font-bold my-8">
           Taskify
         </h1>
 
-        <Task_Adder task={task} setTask={setTask} onAdd={onAdd} />
-        <Tasks tasks={tasks}/>
+        <TaskContext.Provider value={props}>
+          <Task_Adder onAdd={onAdd} />
+          <Tasks/>
+        </TaskContext.Provider>
     </div>
   );
 }
