@@ -11,7 +11,7 @@ This is a readme explaining my learning process on the 3 React hooks stated abov
 - If we're using React with Typescript it's good to pass type argument to the ```useState``` hook.
 
 ## useContext Hook
-- I came accross this hook while I was building a todo list app and encountered the ["prop drilling"][https://www.geeksforgeeks.org/what-is-prop-drilling-and-how-to-avoid-it/] problem.
+- I came accross this hook while I was building a todo list app and encountered the ["prop drilling"](https://www.geeksforgeeks.org/what-is-prop-drilling-and-how-to-avoid-it/) problem.
 
 - To avoid this problem, the ```useContext``` hook allow us to use props deep down the component tree declaring it only once at the root component. Every component in the tree can then use any information stored using the hook without the need to pass down the props down the tree.
 
