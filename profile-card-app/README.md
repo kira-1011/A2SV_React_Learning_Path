@@ -1,3 +1,7 @@
+# Profile Card using React, Typescript and Tailwindcss
+![Demo](./public/design.png "Profile Card")
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
