@@ -23,8 +23,8 @@ const ContactDetails = () => {
         <div className="flex gap-12 h-1/4 w-fit mt-12 px-32 justify-start">
             {
                 contact && 
-                <>
-                    <img className="rounded-3xl" src={contact.avatarURL} alt="Avatar" />
+                <>  
+                    <img className="rounded-3xl max-w-sm h-auto" src={contact.avatarURL} alt="Avatar" />
                     <div className="flex flex-col gap-4">
                         <h1 className="text-5xl font-bold">{ contact.first_name + " " + contact.second_name }</h1>
                         <h2 className="text-3xl mb-4 text-blue-400">{ contact.phone }</h2>

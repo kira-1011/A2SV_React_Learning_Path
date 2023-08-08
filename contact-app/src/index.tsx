@@ -6,16 +6,17 @@ import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } 
 import Home from './components/Home';
 import ContactDetails, { deleteContact, getContact } from './components/ContactDetails';
 import EditContact, { updateContact } from './components/EditContact';
-import AddContact from './components/AddContact';
+import AddContact, { createContact } from './components/AddContact';
+import Error from './components/Error';
+
 
 const routes = createBrowserRouter(createRoutesFromElements(
-  <Route path = "/" element = { <App />} loader={getContacts} >
+  <Route path = "/" element = { <App />} loader={getContacts} errorElement={<Error/>}>
     <Route index element = { <Home/> } />
     <Route path="contacts/:id" element = { <ContactDetails/> } loader={({params}) => getContact(params.id)} />
     <Route path="contacts/:id/edit" element = { <EditContact/> } action={({ request, params }) => updateContact(request, params.id)} />
-    <Route path="contacts/add" element = { <AddContact/> } />
+    <Route path="contacts/add" element = { <AddContact/> } action={({request, params}) => createContact(request)}/>
     <Route path="contacts/:id/delete" action={({ params }) => deleteContact(params.id)}/>
-
   </Route>
 
 ))
