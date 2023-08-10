@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="text-gray-600 font-caveat">
+    <div class="grid md:grid-cols-3">
+      <div class="text-md md:text-2xl md:col-span-1 md:flex md:justify-end">
+        <nav>
+          <div class="flex justify-between items-center">
+            <h1
+              class="font-bold uppercase p-4 border-b border-b-gray-100 text-3xl hover:text-gray-900"
+            >
+              <a href="">Food Recipe</a>
+            </h1>
+            <div class="cursor-pointer md:hidden">
+              <svg
+                id="menu"
+                class="w-8"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <ul id="dropdown" class="my-6 space-y-2 hidden md:block">
+            <li class="text-gray-700 font-bold">
+              <a
+                href="#"
+                class="flex justify-end px-4 border-r-4 border-r-primary"
+              >
+                <span>Home</span>
+                <svg
+                  class="inline-block w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex justify-end px-4 border-r-4 border-r-white"
+              >
+                <span>About</span>
+                <svg
+                  class="w-5 inline-block ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex justify-end px-4 border-r-4 border-r-white"
+              >
+                <span>Contact</span>
+                <svg
+                  class="w-5 ml-2 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+        <div class="text-primary flex gap-4 justify-center md:justify-end">
+          <a
+            class="btn border border-primary md:border-2 hover:bg-primary hover:text-white transition ease-in duration-300"
+            href=""
+            >Log in</a
+          >
+          <a
+            class="btn border border-primary md:border-2 hover:bg-primary hover:text-white transition duration-300"
+            href=""
+            >Sign up</a
+          >
+        </div>
+
+        <header>
+          <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+          <h3 class="text-2xl font-semibold">For All</h3>
+        </header>
+
+        <div>
+          <h4 class="font-bold md:text-lg mt-12 pb-2 border-b border-b-gray-200">
+            Latest Recipes
+          </h4>
+
+          <!-- Cards -->
+          <div class="mt-8 grid lg:grid-cols-3 text-xl gap-10">
+            <div
+              class="card transition duration-300 hover:shadow-lg hover:scale-110"
+            >
+              <img
+                class="w-full object-cover h-32 sm:h-48"
+                src="https://media.istockphoto.com/id/1454643569/photo/italian-beef-vegetable-stew.webp?b=1&s=170667a&w=0&k=20&c=Q3e67mC-rHcbK_dJGebhclYop5RKETOSqbmlGQxWP0E="
+                alt="stew"
+              />
+              <div class="m-4">
+                <span class="font-bold">5 Bean Chilli Stew</span>
+                <span class="block text-sm text-gray-500">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="inline-block w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+
+            <div
+              class="card transition duration-300 hover:shadow-lg hover:scale-110"
+            >
+              <img
+                class="w-full object-cover h-32 sm:h-48"
+                src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="noodles"
+              />
+              <div class="m-4">
+                <span class="font-bold">Veg Noodles</span>
+                <span class="block text-sm text-gray-500">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="inline-block w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+
+            <div
+              class="card transition duration-300 hover:shadow-lg hover:scale-110"
+            >
+              <img
+                class="w-full object-cover h-32 sm:h-48"
+                src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3Vycnl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                alt="curry"
+              />
+              <div class="m-4">
+                <span class="font-bold">Tofu Curry</span>
+                <span class="block text-sm text-gray-500">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="inline-block w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="font-bold mt-12 pb-2 border-b border-b-gray-200">
+            Most Popular
+          </h4>
+
+          <div class="mt-8">
+            <!-- Card -->
+          </div>
+
+          <div class="flex justify-center">
+            <div class="btn bg-gray-200 hover:bg-gray-300">Load more</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
