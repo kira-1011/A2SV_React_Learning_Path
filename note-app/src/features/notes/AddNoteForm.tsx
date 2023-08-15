@@ -43,11 +43,14 @@ const AddNoteForm = () => {
         <button
           className="border border-gray-400 px-4 py-2 rounded hover:bg-gray-600 hover:text-white disabled:bg-gray-200 disabled:text-gray-500"
           type="button"
-          onClick={(e) => dispatch(addNotes({
+          onClick={(e) => {dispatch(addNotes({
             id: nanoid(),
             content,
             title
-          }))}
+          }));
+          setTitle('');
+          setContent('');
+        }}
           disabled={!isValid}
         >
           Add Note

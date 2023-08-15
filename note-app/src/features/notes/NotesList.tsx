@@ -9,7 +9,6 @@ const NotesList = () => {
     const dispatch = useDispatch<any>();
     const status = useSelector(selectStatus);
     const notes = useSelector(selectAllNotes);
-    console.log(notes)
     const sortedNotes = [...notes].reverse()
 
     useEffect(() => {
@@ -17,16 +16,14 @@ const NotesList = () => {
           console.log("fetched")
             dispatch(fetchNotes())
         }
-    }, [dispatch]);
-
-
+    }, [dispatch, status]);
 
   return (
-    <div className='grid grid-cols-4 place-items-center'>
+    <div className='grid grid-cols-3 place-items-center'>
       {status === 'loading' && <Loading/>}
       {status === 'succeded' &&   sortedNotes.map((note) => <Note key={note.id} note={note}/>)}
       {status === 'failed' && <div>Error ...</div> }
-      </div>
+    </div>
   )
 }
 

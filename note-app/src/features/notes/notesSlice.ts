@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { rootStateType } from "../../app/store";
 
@@ -63,17 +63,17 @@ const notesSlice = createSlice({
         })
         .addCase(fetchNotes.rejected, (state, action) => {
             state.status = 'failed';
-            state.error = action.error.message
+            state.error = action.error.message;
         })
         .addCase(addNotes.fulfilled, (state, action) => {
-            state.notes = action.payload;
+            state.notes.push(action.payload);
         })
         .addCase(deleteNote.fulfilled, (state, action) => {
             const noteId = action.payload;
             state.notes = state.notes.filter((note) => note.id !== noteId);
         })
         .addCase(editNote.fulfilled, (state, action) => {
-            let note = state.notes.forEach((note) => {
+            state.notes.forEach((note) => {
                 if(note.id === action.payload.id){
                     note.title = action.payload.title
                     note.content = action.payload.content
