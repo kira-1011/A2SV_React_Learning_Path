@@ -34,3 +34,5 @@ Follow these instructions to get the project up and running on your local machin
 
 4. **Run the development server:**
 `npm run dev`
+5. **Run the json-server using:**
+`npm run start-server`
