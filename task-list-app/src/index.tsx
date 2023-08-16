@@ -15,3 +15,10 @@ root.render(
       </Provider>
   </React.StrictMode>
 );
+
+// Export the store's state to the window object
+declare global {
+  interface Window {
+    store: typeof store;
+  }
+}

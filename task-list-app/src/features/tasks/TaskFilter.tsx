@@ -18,10 +18,11 @@ const TaskFilter = () => {
       <div className="flex">
         <p className="flex">
         <input
+          data-testid="filter-complete"
           onChange={(e) => completedHandler(e)}
           type="checkbox"
           name="completed"
-          className="appearance-none peer outline-none relative w-6 h-6 rounded border-2 border-blue-500 checked:bg-white"
+          className="completed_checkbox appearance-none peer outline-none relative w-6 h-6 rounded border-2 border-blue-500 checked:bg-white"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,10 +44,11 @@ const TaskFilter = () => {
         </p>
        <p className="flex">
        <input
+        data-testid="filter-incomplete"
           onChange={(e) => incompleteHandler(e)}
           type="checkbox"
           name="incomplete"
-          className="appearance-none peer outline-none relative w-6 h-6 rounded border-2 border-blue-500 checked:bg-white"
+          className="incompleted_checkbox appearance-none peer outline-none relative w-6 h-6 rounded border-2 border-blue-500 checked:bg-white"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -23,13 +23,14 @@ const TaskInput = () => {
   return (
     <div className="flex gap-4 items-center justify-center">
       <input
+        data-testid={'task-input'}
         className="p-2 w-1/2 shadow-md rounded outline-none focus:shadow-lg focus:shadow-gray-500"
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
 
-      <button className="w-8 h-8 text-blue-500 bg-white rounded transition duration-300  hover:scale-125" onClick={(e) => addTask(e)}>
+      <button data-testid="add-task-button" className="w-8 h-8 text-blue-500 bg-white rounded transition duration-300  hover:scale-125" onClick={(e) => addTask(e)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
