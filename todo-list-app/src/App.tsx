@@ -1,10 +1,14 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import Task_Adder from "./components/Task_Adder";
 import Tasks from "./components/Tasks";
 import Task from './models/Task_Model';
 import { TaskContext } from "./context/Task_Context";
 
 const App = () => {
+
+  useEffect(() => {
+    document.title = "Taskify";
+  })
 
   const [ task, setTask ] = useState<Task>({
     id: "",

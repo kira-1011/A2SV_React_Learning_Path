@@ -1,16 +1,6 @@
 {
   "contacts": [
     {
-      "id": "1",
-      "first_name": "Houlsan",
-      "second_name": "Kedir",
-      "phone": "+251911111121",
-      "avatarURL": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      "notes": "LOP",
-      "first": "L",
-      "second": "Yemi"
-    },
-    {
       "first_name": "Katy",
       "second_name": "James",
       "phone": "+991234567820",
@@ -33,6 +23,14 @@
       "avatarURL": "https://images.unsplash.com/photo-1630567598693-999d1d740ec8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGV0aGlvcGlhbiUyMGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "notes": "Zola pictures",
       "id": "oc0mWOV"
+    },
+    {
+      "first_name": "L",
+      "second_name": "L",
+      "phone": "+2519999999",
+      "avatarURL": "L",
+      "notes": "L",
+      "id": "2xDj1KF"
     }
   ]
 }

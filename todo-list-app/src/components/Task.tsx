@@ -36,8 +36,6 @@ const Task = ({ task, index } : {task: Task_Model, index: number }) => {
         }
     };
 
-    console.log(task)
-
     return (
         
         <div className="flex justify-between p-4 bg-gray-100 rounded-md">
@@ -55,7 +53,7 @@ const Task = ({ task, index } : {task: Task_Model, index: number }) => {
 
                 { editMode && !task.isCompleted? 
                     <input
-                        className="p-1" 
+                        className="p-1 text-xl rounded-md outline-none w-full shadow-md focus:shadow-blue-200" 
                         type="text" 
                         value={ new_task.task } 
                         onChange={ (e) => setNewTask({

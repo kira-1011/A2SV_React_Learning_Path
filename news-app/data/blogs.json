@@ -2,14 +2,14 @@
   "blogs": [
     {
       "id": "524",
-      "title": "First Blog",
-      "content": "This is my first upD blog.",
+      "title": "First Updated Blog",
+      "content": "This is my first blog  2",
       "date": "3/7/2023",
       "imgURL": "https://images.unsplash.com/photo-1682905926517-6be3768e29f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": "670",
-      "title": "Second blog",
+      "title": "Second UPDATED BLOG",
       "content": "This is my second updated content.",
       "date": "3/7/2023",
       "imgURL": "https://plus.unsplash.com/premium_photo-1689982626144-b13d9bb8e818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"

@@ -10,6 +10,7 @@ const BlogCreateForm = () => {
     const [imgURL, setImgURL] = useState<string>("");
     const Router = useRouter();
 
+    // function to send data to the server on submit
     const handleSubmit = async(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         
         const date = new Date();

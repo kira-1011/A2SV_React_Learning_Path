@@ -6,6 +6,7 @@ const API_BASE_URL = "http://localhost:8000/blogs";
 export const blogsApi = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({baseUrl: API_BASE_URL}),
+    
     endpoints: (builder) => ({
         
         getBlogs: builder.query<BlogType[], void>({

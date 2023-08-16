@@ -2,8 +2,9 @@ import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 import Blog from "@/model/Blog";
 
+// Fetch all blogs without caching automaticallly
 const fetchBlogs = async(url: string) => {
-  const data = await fetch(url, {cache:"no-store"});
+  const data = await fetch(url, { cache: "no-cache" });
   const blogs: Blog[] = await data.json();
   return blogs;
 }

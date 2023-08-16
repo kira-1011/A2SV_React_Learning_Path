@@ -9,8 +9,6 @@ const NotePage = () => {
   const dispatch = useDispatch<any>();
   const navigate = useNavigate();
 
-  console.log(useSelector(selectAllNotes))
-  console.log(noteId);
 
   const deleteHandler = () => {
     if (note) {
@@ -42,7 +40,7 @@ const NotePage = () => {
             </button>
           </Link>
 
-          <div className="flex flex-col p-8 items-center gap-12 overflow-auto
+          <div className="flex flex-col p-8 items-center gap-16 break-all
           ">
           <h1 className="font-bold text-4xl">{note.title}</h1>
 

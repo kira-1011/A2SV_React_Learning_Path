@@ -1,6 +1,7 @@
 import BlogDetail from "@/components/BlogDetail";
 import Blog from "@/model/Blog";
 
+// function to fetch single blog
 export const fetchBlog = async(url: string) => {
 
     const res = await fetch(url, {cache:"no-store"});

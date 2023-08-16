@@ -1,6 +1,6 @@
 # Simple Blog Project with Redux Toolkit and Next.js
 
-This is a simple blog project that demonstrates the integration of Redux Toolkit and Next.js. The project allows users to view and interact with blog posts.
+This is a simple blog project that demonstrates the integration of Redux Toolkit, Redux toolkit Query and Next.js. The project allows users to view and interact with blog posts.
 
 ## Features
 
@@ -15,6 +15,7 @@ This is a simple blog project that demonstrates the integration of Redux Toolkit
 - React
 - Next.js
 - Redux Toolkit
+- Redux toolkit Query
 - Tailwindcss for styling
 
 ## Getting Started
