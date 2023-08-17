@@ -24,6 +24,7 @@ const TaskList = () => {
         })}
 
       {!filterByComplete && !filterByIncomplete &&
+      tasks &&
         tasks.map((task, i) => (
           <Task key={i} index={i} task={task} data-testid={`task-${i}`} />
         ))}

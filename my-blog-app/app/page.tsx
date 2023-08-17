@@ -6,10 +6,8 @@ import { useGetBlogsQuery } from '../redux/features/blogs/blogsApi';
 export default function BlogList() {
 
   const { data, isSuccess, isError  } = useGetBlogsQuery();
+
   
-
-  console.log(data);
-
   return (
     
     <main className="flex flex-col gap-12 items-center">

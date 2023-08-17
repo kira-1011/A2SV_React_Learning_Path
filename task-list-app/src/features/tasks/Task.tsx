@@ -94,7 +94,7 @@ const Task = ({ task, index }: { task: TaskModel; index: number }) => {
           <button
             className="confirm_btn p-1 rounded transition duration-300 hover:text-blue-700 hover:shadow-md hover:shadow-gray-700"
             onClick={(e) => confirmHandler()}
-            data-testid="save-edit-button"
+            data-testid={`edit-task-button-${index}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ const Task = ({ task, index }: { task: TaskModel; index: number }) => {
             disabled={task.status || false}
             className="edit_btn p-1 rounded transition duration-300 hover:text-blue-700 hover:shadow-md hover:shadow-gray-700"
             onClick={(e) => editHandler()}
-            data-testid="edit-task-button"
+            data-testid={`edit-task-button-${index}}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ const Task = ({ task, index }: { task: TaskModel; index: number }) => {
         <button
           className="delete_btn p-1 rounded transition duration-300 hover:text-blue-700 hover:shadow-md hover:shadow-gray-700"
           onClick={(e) => deleteTask()}
-          data-testid="delete-task-button"
+          data-testid={`delete-button-${index}`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

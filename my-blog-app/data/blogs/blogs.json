@@ -1,19 +1,6 @@
 {
   "blogs": [
     {
-      "id": "I0wJuIoeCzizxwZ5fpwAH",
-      "content": "NLP",
-      "title": "NEWW",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      }
-    },
-    {
       "id": "dxLSYLG3YCdBz-LdWSgM2",
       "title": "ALL",
       "date": "",
@@ -103,6 +90,33 @@
         "fire": 0
       },
       "content": "f"
+    },
+    {
+      "id": "uIchuvB4IIrbPnnhp7Wm7",
+      "title": "NEW BLOG ADDED",
+      "date": "",
+      "reactions": {
+        "thumbsup": 0,
+        "heart": 0,
+        "thumbsdown": 0,
+        "thinking": 0,
+        "fire": 0
+      },
+      "content": "ALALALA"
+    },
+    {
+      "id": "164",
+      "title": "ADDIS blog",
+      "content": "aaaaaaaaaaaa",
+      "date": "4/7/2023",
+      "imgURL": "aa"
+    },
+    {
+      "id": "737",
+      "title": "LLL",
+      "content": "LLLLLLLLLLLLLLLLll",
+      "date": "4/7/2023",
+      "imgURL": "L"
     }
   ]
 }

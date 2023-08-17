@@ -23,7 +23,7 @@ const TaskInput = () => {
   return (
     <div className="flex gap-4 items-center justify-center">
       <input
-        data-testid={'task-input'}
+        data-testid="task-input"
         className="p-2 w-1/2 shadow-md rounded outline-none focus:shadow-lg focus:shadow-gray-500"
         type="text"
         value={task}

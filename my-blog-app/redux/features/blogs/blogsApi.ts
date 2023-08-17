@@ -6,11 +6,12 @@ const API_BASE_URL = "http://localhost:8000/blogs";
 export const blogsApi = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({baseUrl: API_BASE_URL}),
-    
+    tagTypes: ['blog'],
     endpoints: (builder) => ({
         
         getBlogs: builder.query<BlogType[], void>({
-            query: () => '/'
+            query: () => '/',
+            providesTags: ['blog']
         }),
 
         getBlog: builder.query<BlogType, string>({
@@ -22,14 +23,16 @@ export const blogsApi = createApi({
                 url: '/',
                 method: 'POST',
                 body: blog
-            })
+            }),
+            invalidatesTags: ['blog']
         }),
 
         deleteBlog: builder.mutation<void, string>({
             query: (blogId) => ({
                 url: `${blogId}`,
                 method: 'DELETE',
-            })
+            }),
+            invalidatesTags: ['blog']
         }),
 
         updateBlog: builder.mutation<BlogType, Partial<BlogType>>({
@@ -37,7 +40,8 @@ export const blogsApi = createApi({
                 url: `${blog.id}`,
                 method: 'PUT',
                 body: blog
-            })
+            }),
+            invalidatesTags: ['blog']
         })
     })
 });

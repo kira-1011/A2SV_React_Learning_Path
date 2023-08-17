@@ -18,7 +18,7 @@ const TaskFilter = () => {
       <div className="flex">
         <p className="flex">
         <input
-          data-testid="filter-complete"
+          data-testid={`complete-checkbox`}
           onChange={(e) => completedHandler(e)}
           type="checkbox"
           name="completed"

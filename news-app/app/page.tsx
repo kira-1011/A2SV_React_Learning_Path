@@ -1,6 +1,9 @@
+'use client';
+
 import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 import Blog from "@/model/Blog";
+import { useEffect, useState } from "react";
 
 // Fetch all blogs without caching automaticallly
 const fetchBlogs = async(url: string) => {
@@ -10,8 +13,13 @@ const fetchBlogs = async(url: string) => {
 }
 
 const HomePage = async() => {
- 
-  const blogs: Blog[] = await fetchBlogs("http://localhost:8000/blogs");
+  
+  const [blogs, setBlogs] = useState<Blog[]>([])
+  
+  useEffect(() => {
+     fetchBlogs("http://localhost:8000/blogs").then(res => setBlogs(res));
+  }, [])
+  ;
   return (
 
     <main>
