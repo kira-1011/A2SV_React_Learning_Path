@@ -2,20 +2,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Menu = () => {
+const Menu = ({isMenuActive}: {isMenuActive: boolean}) => {
 
     const current_path = usePathname();
 
   return (
-    <ul id="dropdown" className="my-6 space-y-2 hidden md:block">
+    <ul id="dropdown" className={`my-6 space-y-4 ${isMenuActive? "block" : "hidden"} md:block` }>
       <li className="text-gray-700 font-bold">
         <Link
           href="/"
-          className={`flex justify-end px-4 ${current_path === "/"? "border-r-4 border-r-primary" : "" }`}
+          className={`flex justify-start px-4`}
         >
           <span>Home</span>
           <svg
-            className="inline-block w-5 ml-2"
+            className={`inline-block w-5 ml-2 ${current_path === "/"? "text-primary" : "" }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -33,11 +33,11 @@ const Menu = () => {
       <li>
         <Link
           href="/about"
-          className={`flex justify-end px-4 border-r ${current_path === '/contact'}? border-r-primary : ""`}
+          className="flex justify-start px-4"
         >
           <span>About</span>
           <svg
-            className="w-5 inline-block ml-2"
+            className={`inline-block w-5 ml-2 ${current_path === "/about"? "text-primary" : "" }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -55,11 +55,11 @@ const Menu = () => {
       <li>
         <Link
           href="/contact"
-          className={`flex justify-end px-4 border-r-4 ${current_path === '/contact'}? border-r-primary : "" `}
+          className="flex justify-start px-4 "
         >
           <span>Contact</span>
           <svg
-            className="w-5 ml-2 inline-block"
+            className={`inline-block w-5 ml-2 ${current_path === "/contact"? "text-primary" : "" }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

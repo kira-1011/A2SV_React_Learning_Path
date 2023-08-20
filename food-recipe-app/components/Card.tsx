@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Card = ({ recipe }: { recipe: Recipe }) => {
   return (
-    <div className="card transition duration-300 hover:shadow-lg hover:scale-110">
+    // <div className="card transition duration-300 hover:shadow-lg hover:scale-110">
       <Link href={`recipes/${recipe.id}`}>
         <img
           className="w-full object-cover h-32 sm:h-48"
@@ -34,7 +34,7 @@ const Card = ({ recipe }: { recipe: Recipe }) => {
           <span>{recipe.time} mins</span>
         </div>
       </Link>
-    </div>
+    // </div>
   );
 };
 

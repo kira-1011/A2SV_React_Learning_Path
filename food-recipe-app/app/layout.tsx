@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Food Crafts',
@@ -16,10 +17,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="text-gray-600 font-caveat">
         
-        <div className="grid md:grid-cols-3">
+        <div className="flex flex-col md:flex-row">
           <Navbar/>
           {children}
         </div>
+        <Footer/>
         </body>
     </html>
   )

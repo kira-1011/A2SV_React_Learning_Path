@@ -1,8 +1,8 @@
 {
   "blogs": [
     {
-      "id": "dxLSYLG3YCdBz-LdWSgM2",
-      "title": "ALL",
+      "id": "kKo36Vt5LDcEOHEOgEFq5",
+      "title": "My blog",
       "date": "",
       "reactions": {
         "thumbsup": 0,
@@ -11,112 +11,7 @@
         "thinking": 0,
         "fire": 0
       },
-      "content": "BLOGS"
-    },
-    {
-      "id": "0QJOH7yJ1S-S8GgK09Bu3",
-      "title": "SSS",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "GGG"
-    },
-    {
-      "id": "z9dtgm_XKIYiTZQ8P-GL4",
-      "title": "NEWWWWW",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "WWWWWWWWWWWWW"
-    },
-    {
-      "id": "S_EUq1devarVoaOpzLxuT",
-      "title": "AOWOOWOWOWO",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "POOPPPPPPPPP"
-    },
-    {
-      "id": "kcLc-rqFW_zyO9K_lcZc7",
-      "title": "s",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "s"
-    },
-    {
-      "id": "8C-HZjw65NiSx9ar2bnyy",
-      "title": "HLELE",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "AAA"
-    },
-    {
-      "id": "SCtdT9yKAQVxmKBiAUG6o",
-      "title": "f",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "f"
-    },
-    {
-      "id": "uIchuvB4IIrbPnnhp7Wm7",
-      "title": "NEW BLOG ADDED",
-      "date": "",
-      "reactions": {
-        "thumbsup": 0,
-        "heart": 0,
-        "thumbsdown": 0,
-        "thinking": 0,
-        "fire": 0
-      },
-      "content": "ALALALA"
-    },
-    {
-      "id": "164",
-      "title": "ADDIS blog",
-      "content": "aaaaaaaaaaaa",
-      "date": "4/7/2023",
-      "imgURL": "aa"
-    },
-    {
-      "id": "737",
-      "title": "LLL",
-      "content": "LLLLLLLLLLLLLLLLll",
-      "date": "4/7/2023",
-      "imgURL": "L"
+      "content": "Blalalalal"
     }
   ]
 }

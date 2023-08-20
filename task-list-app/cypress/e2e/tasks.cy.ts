@@ -22,7 +22,7 @@ describe("Task Management Feature test", () => {
     cy.get('[data-testid="task-input"]').type(taskText);
     cy.get('[data-testid="add-task-button"]').click();
 
-    cy.get('.task').eq(taskToDeleteIndex).find('[data-testid="delete-task-button"]').click();
+    cy.get('.task').eq(taskToDeleteIndex).find('[data-testid="delete-button-0"]').click();
 
     });
 
@@ -35,9 +35,9 @@ describe("Task Management Feature test", () => {
       const taskToEditIndex = 0;
       const editedTaskText = 'Edited Task';
   
-      cy.get('.task').eq(taskToEditIndex).find('[data-testid="edit-task-button"]').click();
+      cy.get('.task').eq(taskToEditIndex).find('[data-testid="edit-task-button-0"]').click();
       cy.get('.task').eq(taskToEditIndex).find('[data-testid="task-input"]').clear().type(editedTaskText);
-      cy.get('.task').eq(taskToEditIndex).find('[data-testid="save-edit-button"]').click();
+      cy.get('.task').eq(taskToEditIndex).find('[data-testid="save-task-button-0"]').click();
   
     });
   
@@ -52,10 +52,10 @@ describe("Task Management Feature test", () => {
       cy.get('[data-testid="task-input"]').type(taskText2);
       cy.get('[data-testid="add-task-button"]').click();
   
-      const taskToCompleteIndex = 1;
+      const taskToCompleteIndex = 0;
   
-      cy.get('.task').eq(taskToCompleteIndex).find('.complete_btn').click();  
-      cy.get('.task p').eq(taskToCompleteIndex).should('have.class', 'line-through');
+      cy.get('.task').eq(taskToCompleteIndex).get('[data-testid="completed-checkbox-0"]').click();  
+      cy.get('[data-testid="task-content-0"]').should('have.class', 'line-through');
     });
   
   
@@ -74,16 +74,15 @@ describe("Task Management Feature test", () => {
       cy.get('[data-testid="task-input"]').type(taskText3);
       cy.get('[data-testid="add-task-button"]').click();
 
-      cy.get('.task').eq(0).find('.complete_btn').click();  
+      cy.get('[data-testid="completed-checkbox-0"]').click();  
 
-  
-      cy.get('[data-testid="filter-complete"]').check();
+      cy.get('[data-testid="complete-checkbox"]').check();  
 
       cy.get('.task').should('have.length', 1);
 
-      cy.get('[data-testid="filter-complete"]').uncheck();
+      cy.get('[data-testid="complete-checkbox"]').uncheck();
   
-      cy.get('[data-testid="filter-incomplete"]').check();
+      cy.get('[data-testid="incomplete-checkbox"]').check();
 
       cy.get('.task').should('have.length', 2);
 

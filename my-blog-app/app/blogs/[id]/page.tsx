@@ -36,14 +36,14 @@ const BlogDetailPage = ({ params }: { params: Params }) => {
                     type="button"
                     href={`/blogs/edit/${blog.id}`}
                   >
-                    Edit Post
+                    Edit Blog
                   </Link>
                 </button>
                 <button
                   onClick={deleteHandler}
                   className="border border-gray-400 px-4 py-2 rounded hover:bg-gray-600 hover:text-white disabled:bg-gray-200 disabled:text-gray-500"
                 >
-                  Delete Post
+                  Delete Blog
                 </button>
               </div>
             </div>

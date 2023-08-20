@@ -6,7 +6,7 @@ import ReactionButtons from './ReactionButtons'
 const Blog = ({ blog }: { blog: BlogType }) => {
   return (
     <div
-      className="rounded px-4 py-2 border space-y-4 border-gray-400 w-1/4 hover:border-gray-900"
+      className="rounded px-4 py-2 border space-y-4 border-gray-400 w-fit hover:border-gray-900"
     >
       <div className="space-y-2">
         <h3 className="font-bold text-2xl truncate">{blog.title}</h3>

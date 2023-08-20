@@ -62,6 +62,7 @@ const Task = ({ task, index }: { task: TaskModel; index: number }) => {
           className="complete_btn relative outline-none peer appearance-none w-6 h-6 border-2 border-blue-500 bg-white rounded-full checked:bg-blue-500 checked:border-0 "
           type="checkbox"
           defaultChecked={task.status || false}
+          data-testid={`completed-checkbox-${index}`}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +95,7 @@ const Task = ({ task, index }: { task: TaskModel; index: number }) => {
           <button
             className="confirm_btn p-1 rounded transition duration-300 hover:text-blue-700 hover:shadow-md hover:shadow-gray-700"
             onClick={(e) => confirmHandler()}
-            data-testid={`edit-task-button-${index}`}
+            data-testid={`save-task-button-${index}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +113,7 @@ const Task = ({ task, index }: { task: TaskModel; index: number }) => {
             disabled={task.status || false}
             className="edit_btn p-1 rounded transition duration-300 hover:text-blue-700 hover:shadow-md hover:shadow-gray-700"
             onClick={(e) => editHandler()}
-            data-testid={`edit-task-button-${index}}`}
+            data-testid={`edit-task-button-${index}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

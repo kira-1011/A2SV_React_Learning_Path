@@ -44,7 +44,7 @@ const TaskFilter = () => {
         </p>
        <p className="flex">
        <input
-        data-testid="filter-incomplete"
+         data-testid={`incomplete-checkbox`}
           onChange={(e) => incompleteHandler(e)}
           type="checkbox"
           name="incomplete"

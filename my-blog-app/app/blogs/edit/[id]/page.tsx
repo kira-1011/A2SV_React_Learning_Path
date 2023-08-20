@@ -1,14 +1,12 @@
 "use client";
 
 import { useGetBlogQuery, useUpdateBlogMutation } from "@/redux/features/blogs/blogsApi";
-import { BlogType } from "@/redux/features/blogs/blogsSlice";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const BlogEditForm = () => {
   
   const { id } = useParams();
-  const router = useRouter();
 
   const { data: blog, isSuccess: isFetchSucess } = useGetBlogQuery(id as string)
 
@@ -18,6 +16,8 @@ const BlogEditForm = () => {
   const [ updateBlog, {isSuccess, isError} ] = useUpdateBlogMutation();
 
   const isValid = Boolean(title) && Boolean(content);
+  const router = useRouter();
+
 
   const onSubmitHandler = () => {
     
@@ -28,8 +28,11 @@ const BlogEditForm = () => {
         date: "",
         reactions: blog?.reactions
     });
+
+    router.push('/');
     
   };
+  
 
   return (
     <div className="p-4 space-y-12">
@@ -66,7 +69,7 @@ const BlogEditForm = () => {
               onClick={onSubmitHandler}
               disabled={!isValid}
             >
-              Save Post
+              Save Blog
             </button>
           </div>
         </form>
